@@ -1,0 +1,141 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Declare properties of margin and padding and box sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
+header {
+  background-color: turquoise;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.1rem;
+  text-align: center;
+}
+header h1{
+  margin: 0.1rem;
+}
+
+nav{
+  /* display: flex; */
+  align-items: center;
+}
+
+nav a{
+  color: black;
+}
+
+nav a.active{
+  font-weight: 650;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 0;
+  margin-right: 0;
+}
+
+header h1 {
+  padding: 1rem;
+}
+
+/* Hamburger menu styling and responsiveness */
+#menu {
+  display: block;
+  font-size: 2rem;
+  border: 0;
+  background: none;
+  color: #fff;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+#menu::before {
+  content: "☰";
+}
+
+#menu.show::before {
+  content: "❌";
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  list-style: none;
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+.navigation a {
+  display: none;
+  padding: .7rem;
+  text-align: center;
+  text-decoration: none;
+  /* color: #fff; */
+  font-size: 1rem;
+}
+
+/* Menu navigation hover effect */
+.navigation a:hover {
+  color: #000;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.show a {
+  display: block;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  justify-items: center;
+}
+
+h2 {
+  padding: 2rem;
+  text-align: center;
+}
+
+/* figures */
+figure {
+  justify-content: center;
+  align-items: center;
+  width: 100%; 
+  height: auto; 
+  margin: .5rem;
+  text-align: center;
+}
+
+figure img{
+  margin: .2rem;
+  width: 20rem;
+}
+
+figcaption {
+  font-size: 1.rem;
+  font-family: 'Roboto', sans-serif;
+  padding: .5rem;}
+
+footer {
+  background-color: turquoise;
+  color: #000;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1rem;
+  text-align: center;
+}
