@@ -127,9 +127,10 @@ figure img{
 }
 
 figcaption {
-  font-size: 1.rem;
-  font-family: 'Roboto', sans-serif;
-  padding: .5rem;}
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  padding: 0.5rem;
+}
 
 footer {
   background-color: turquoise;
