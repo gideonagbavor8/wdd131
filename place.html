@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Page</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Gideon Komla Agbavor - Country Page">
+    <meta name="author" content="Gideon Komla Agbavor">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@400;500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+    <title>Place Country</title>
+</head>
+<body>
+    <header>
+        <h1>Ghana</h1>
+    </header>
+
+    <main>
+        <div class="line"></div>
+        <section class="image-background-container">
+            <source srcset="images/ghana-large.webp" media="(min-width: 1000px)">
+            <source srcset="images/ghana-medium.webp" media="(min-width: 500px)">
+            <img class="image-background" srcset="images/gye-nyame-large.webp" alt="Background Image"/>
+        </section>
+
+        <div class="content-wrapper">
+            <section class="card left-side">
+                <h2>Data</h2>
+                <ul class="data-grid">
+                    <li><strong>Area:</strong> 	<span>238,533 square kilometers</span></li>
+                    <li><strong>Population:</strong>  <span>About 31 million (as of 2021)</span></li>
+                    <li><strong>Capital:</strong>  <span>Accra</span> </li>
+                    <li><strong>Languages:</strong><span>Akan, Mole-Dagbani, Ewe, and Ga  </span></li>
+                    <li><strong>Currency:</strong> <span>Ghanaian Cedis (GHS)</span></li>
+                    <li><strong>Time Zone:</strong> <span>Greenwich Mean Time (GMT)</span></li>
+                    <li><strong>Calling Code:</strong>  <span>+233</span></li>
+                    <li><strong>Internet TLD: </strong> <span>.gh</span></li> 
+                </ul>
+            </section>
+
+            <section class="card right-side">
+                <h2>Weather
+                    <img src="images/weather-day.svg" alt="Weather Icon"/>
+                </h2>
+                <!-- <div class="weather-icon">
+                    <img src="images/weather-day.svg" alt="Weather Icon"/>
+                </div> -->
+                <ul class="data-grid">
+                    <li><strong class="label">Temperature:</strong> <span>25°C</span> </li>
+                    <li><strong class="label">Condition:</strong> <span>Cloudy</span></li>
+                    <li><strong class="label">Wind: </strong> <span>9 km/h</span></li>
+                    <li><strong class="label">Wind Chill:</strong> <span id="windChill">N/A</span></li>
+
+                </ul>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>©<span id="currentyear"></span> || Gideon Komla Agbavor || Ghana</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
