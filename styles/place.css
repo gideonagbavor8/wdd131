@@ -185,7 +185,7 @@ footer p {
 
     .data-item {
         padding: 0.3em 0;
-        margin: rem auto;
+        margin: auto;
     }
 
     .data h2{
@@ -219,7 +219,7 @@ footer p {
     }
 
     footer{
-        height: vh;
+        /* height: vh; */
         padding: 0.2rem;
     }
 
