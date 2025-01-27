@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,58 +9,84 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@400;500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Country Page</title>
     <link rel="stylesheet" href="styles/place.css">
     <script src="scripts/place.js" defer></script>
-    <title>Country Page</title>
 </head>
 <body>
     <header>
         <h1>Ghana</h1>
     </header>
-
+    <div class="baseline"></div>
     <main>
-        <div class="line"></div>
-        <section class="image-background-container">
-            <source srcset="images/ghana-large.webp" media="(min-width: 1000px)">
-            <source srcset="images/ghana-medium.webp" media="(min-width: 500px)">
-            <img class="image-background" srcset="images/gye-nyame-large.webp" alt="Background Image"/>
+        <section class="hero">
+            <picture>
+                <source srcset="images/gye-nyame-large.webp" media="(min-width: 800px)">
+                <source srcset="images/gye-nyame-medium.webp" media="(min-width: 500px)">
+                <img src="images/gye-nyame-small.webp" alt="Hero Image">
+            </picture>
         </section>
-
-        <div class="content-wrapper">
-            <section class="card left-side">
-                <h2>Data</h2>
-                <ul class="data-grid">
-                    <li><strong>Area:</strong> 	<span>238,533 square kilometers</span></li>
-                    <li><strong>Population:</strong>  <span>About 31 million (as of 2021)</span></li>
-                    <li><strong>Capital:</strong>  <span>Accra</span> </li>
-                    <li><strong>Languages:</strong><span>Akan, Mole-Dagbani, Ewe, and Ga  </span></li>
-                    <li><strong>Currency:</strong> <span>Ghanaian Cedis (GHS)</span></li>
-                    <li><strong>Time Zone:</strong> <span>Greenwich Mean Time (GMT)</span></li>
-                    <li><strong>Calling Code:</strong>  <span>+233</span></li>
-                    <li><strong>Internet TLD: </strong> <span>.gh</span></li> 
-                </ul>
-            </section>
-
-            <section class="card right-side">
-                <h2>Weather
-                    <img src="images/weather-day.svg" alt="Weather Icon"/>
-                </h2>
-                <!-- <div class="weather-icon">
-                    <img src="images/weather-day.svg" alt="Weather Icon"/>
-                </div> -->
-                <ul class="data-grid">
-                    <li><strong class="label">Temperature:</strong> <span>25°C</span> </li>
-                    <li><strong class="label">Condition:</strong> <span>Cloudy</span></li>
-                    <li><strong class="label">Wind: </strong> <span>9 km/h</span></li>
-                    <li><strong class="label">Wind Chill:</strong> <span id="windChill">N/A</span></li>
-
-                </ul>
-            </section>
-        </div>
+        <section class="data">
+            <h2>Data</h2>
+            <div class="data-item">
+                <span class="label">Area:</span>
+                <span class="value">238,533 km2</span>
+            </div>
+            <div class="data-item">
+                <span class="label">Population:</span>
+                <span class="value">31 million (2021)</span>
+            </div>
+            <div class="data-item">
+                <span class="label">Capital:</span>
+                <span class="value">Accra</span>
+            </div>
+            <div class="data-item">
+                <span class="label">Languages:</span>
+                <span class="value">Akan, Mole-Dagbani, Ewe, and Ga</span>
+            </div>
+            <div class="data-item">
+                <span class="label">Currency:</span>
+                <span class="value">Ghanaian Cedis (GHS)</span>
+            </div>
+            <div class="data-item">
+                <span class="label">Time Zone:</span>
+                <span class="value">Greenwich Mean Time (GMT)</span>
+            </div>
+            <div class="data-item">
+                <span class="label">Calling Code:</span>
+                <span class="value">+233</span>
+            </div>
+            <div class="data-item">
+                <span class="label">Internet TLD:</span>
+                <span class="value">.gh</span>
+            </div>
+        </section>
+        <hr>
+        <section class="weather">
+            <!-- <h2>Weather <span class="weather-icon">⛅</span></h2> -->
+            <h2>Weather</h2>
+            <img src="images/weather-day.svg" alt="Weather Icon">
+            <div class="data-item">
+                <span class="label">Temperature:</span>
+                <span class="value">20°C</span>
+            </div>
+            <div class="data-item">
+                <span class="label">Conditions:</span>
+                <span class="value">Cloudy</span>
+            </div>
+            <div class="data-item">
+                <span class="label">Wind:</span>
+                <span class="value">5 km/h</span>
+            </div>
+            <div class="data-item">
+                <span class="label">Wind Chill:</span>
+                <span class="value" id="wind-chill">N/A</span>
+            </div>
+        </section>
     </main>
     <footer>
-        <p>©<span id="currentyear"></span> || Gideon Komla Agbavor || Ghana</p>
-        <p id="lastModified"></p>
+        <p>&copy; <span id="current-year"></span> &#10084; Gideon Komla Agbavor &#10084; Ghana</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
     </footer>
 </body>
 </html>
