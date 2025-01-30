@@ -1,0 +1,35 @@
+@media (min-width: 768px) {
+    /* #menu {
+      display: none;
+    } */
+  
+    header {
+      flex-direction: row; 
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    nav {
+      display: flex; 
+      flex-direction: row;
+    }
+  
+  
+    nav a:hover {
+      background-color: var(--hover-bg-color); /* Light background on hover */
+    }
+
+    nav ul {
+        display: flex;        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        margin: 0 10px; /* Add some spacing between the items */
+    }
+
+    /* #menu{
+        display: none;
+    } */
+  }
