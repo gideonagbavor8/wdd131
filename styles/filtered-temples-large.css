@@ -11,9 +11,9 @@
     }
   
   
-    nav a:hover {
+    /* nav a:hover {
       background-color: var(--hover-bg-color); 
-    }
+    } */
 
     nav ul {
         display: flex;        
