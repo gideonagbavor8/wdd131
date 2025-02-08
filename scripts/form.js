@@ -11,31 +11,35 @@ const lastModified = document.lastModified;
 document.getElementById("last-modified").textContent = `${lastModified}`;
 
 document.addEventListener('DOMContentLoaded', () => {
-    let reviewCount = localStorage.getItem('reviewCount') || 0;
-    reviewCount++;
-    localStorage.setItem('reviewCount', reviewCount);
-    document.getElementById('review-count').textContent = reviewCount;
-});
-
-document.addEventListener('DOMContentLoaded', () => {
     // Check if we are on the review.html page
     if (window.location.pathname.includes("review.html")) {
-        // Get the current count from localStorage
-        let reviewCount = localStorage.getItem('reviewCount') || 0;
-        
-        // Increment the count
-        reviewCount++;
-        
-        // Save the new count back to localStorage
-        localStorage.setItem('reviewCount', reviewCount);
-        
-        // Display the count in the "thank you" container
-        document.getElementById('review-count').textContent = reviewCount;
+        // Check if the form was submitted
+        const formSubmitted = localStorage.getItem('formSubmitted');
+        if (formSubmitted) {
+            // Get the current count from localStorage
+            let reviewCount = localStorage.getItem('reviewCount') || 0;
 
-        // Redirect to the review.html page
-        window.location.href = 'review.html';
+            // Increment the count
+            reviewCount++;
+
+            // Save the new count back to localStorage
+            localStorage.setItem('reviewCount', reviewCount);
+
+            // Display the count in the "thank you" container
+            document.getElementById('review-count').textContent = reviewCount;
+
+            // Clear the formSubmitted flag
+            localStorage.removeItem('formSubmitted');
+
+            // Prevent continuous refresh by redirecting to a clean version of the page
+            if (!window.location.hash) {
+                window.location += '#loaded';
+                window.location.reload();
+            }
+        }
     }
 });
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const products = [
