@@ -10,12 +10,12 @@ const lastModified = document.lastModified;
 // Update the second paragraph in the footer with the last modified date
 document.getElementById("last-modified").textContent = `${lastModified}`;
 
-// document.addEventListener('DOMContentLoaded', () => {
-//     let reviewCount = localStorage.getItem('reviewCount') || 0;
-//     reviewCount++;
-//     localStorage.setItem('reviewCount', reviewCount);
-//     document.getElementById('review-count').textContent = reviewCount;
-// });
+document.addEventListener('DOMContentLoaded', () => {
+    let reviewCount = localStorage.getItem('reviewCount') || 0;
+    reviewCount++;
+    localStorage.setItem('reviewCount', reviewCount);
+    document.getElementById('review-count').textContent = reviewCount;
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     // Check if we are on the review.html page
@@ -31,6 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Display the count in the "thank you" container
         document.getElementById('review-count').textContent = reviewCount;
+
+        // Redirect to the review.html page
+        window.location.href = 'review.html';
     }
 });
 
