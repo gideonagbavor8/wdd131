@@ -20,26 +20,19 @@ document.getElementById("last-modified").textContent = `${lastModified}`;
 document.addEventListener('DOMContentLoaded', () => {
     // Check if we are on the review.html page
     if (window.location.pathname.includes("review.html")) {
-        // Check if the form has been submitted
-        if (localStorage.getItem('formSubmitted') === 'true') {
-            // Get the current count from localStorage
-            let reviewCount = parseInt(localStorage.getItem('reviewCount')) || 0;
-            
-            // Increment the count
-            reviewCount++;
-            
-            // Save the new count back to localStorage
-            localStorage.setItem('reviewCount', reviewCount);
-            
-            // Display the count in the "thank you" container
-            document.getElementById('review-count').textContent = reviewCount;
-            
-            // Reset the formSubmitted flag
-            // localStorage.setItem('formSubmitted', 'false');
-        }
+        // Get the current count from localStorage
+        let reviewCount = localStorage.getItem('reviewCount') || 0;
+        
+        // Increment the count
+        reviewCount++;
+        
+        // Save the new count back to localStorage
+        localStorage.setItem('reviewCount', reviewCount);
+        
+        // Display the count in the "thank you" container
+        document.getElementById('review-count').textContent = reviewCount;
     }
 });
-
 
 document.addEventListener('DOMContentLoaded', () => {
   const products = [
@@ -64,26 +57,3 @@ form.addEventListener('submit', () => {
     });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Check if we are on the review.html page
-    if (window.location.pathname.includes("review.html")) {
-        // Get the current count from localStorage
-        let reviewCount = parseInt(localStorage.getItem('reviewCount')) || 0;
-        
-        // Display the count in the "thank you" container
-        document.getElementById('review-count').textContent = reviewCount;
-    }
-});
-
-const form = document.getElementById('review-form');
-form.addEventListener('submit', () => {
-    // Increment the count
-    let reviewCount = parseInt(localStorage.getItem('reviewCount')) || 0;
-    reviewCount++;
-    
-    // Save the new count back to localStorage
-    localStorage.setItem('reviewCount', reviewCount);
-    
-    // Set the formSubmitted flag
-    // localStorage.setItem('formSubmitted', 'true');
-});
