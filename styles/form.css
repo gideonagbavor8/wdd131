@@ -162,6 +162,12 @@ body {
         border-radius: 8px 8px 0 0;
     }
 
+    .thank-you p{
+        margin: 3rem;
+        padding: 0.3rem;
+        font-size: 1rem;
+    }
+
     footer p span{
         color: white;
     }
@@ -177,5 +183,6 @@ body {
     }
 
     .thank-foot{
+        margin-top: 1rem;
         border-radius: 0 0 8px 8px;
     }
