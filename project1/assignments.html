@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Access Hub - Assignments Page</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Project: Student Access Hub - Gideon Komla Agbavor - Assignments Page">
+    <meta name="author" content="Gideon Komla Agbavor">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@400;500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+
+</head>
+<body>
+    <div id="date-time-container"></div>
+    <header>
+        <div class="header-left">
+            <div class="menu-icon" onclick="openSlidePane()">&#9776;</div>
+            <div class="logo">
+                <img src="images/logo.jpeg" alt="School Logo" loading="lazy">
+            </div>
+        </div>
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="grades.html">Grades</a></li>
+                <li><a href="assignments.html">Assignments</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="forums.html">Forums</a></li>  
+            </ul>
+        </nav>
+        <button class="login-button" onclick="openLoginForm()">Login</button>
+        <div class="search-container">
+            <form class="search-bar">
+                <input type="text" name="query" placeholder="your name..." aria-label="Search">
+                <button class="search-button" type="submit">Search</button>
+            </form>
+        </div>
+        <div class="profile" onclick="toggleDropdown()">
+            <img src=" " alt="Student Profile" loading="lazy">
+            <div class="dropdown-content" id="dropdown-content">
+                <a href="#">View Profile</a>
+                <a href="#">Settings</a>
+                <a href="#">Logout</a>    
+            </div>
+        </div>
+    </header>
+    <div id="slide-pane" class="slide-pane">
+        <span class="close-icon" onclick="closeSlidePane()">&times;</span>
+        <ul class="pane-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="grades.html">Grades</a></li>
+            <li><a href="assignments.html">Assignments</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="forums.html">Forums</a></li>
+        </ul>
+    </div>
+    <main>
+        <section class="assignments">
+            <div id="date-time-container"></div>
+            <h1>Assignments</h1>
+            <p>Here you can view and submit your assignments.</p>
+            <div class="filter-container">
+                <label for="course-filter">Filter by Course:</label>
+                <select id="course-filter" name="course-filter">
+                    <option value="all">All Courses</option>
+                    <option value="math">Math</option>
+                    <option value="science">Science</option>
+                    <option value="history">History</option>
+                    <option value="english">English</option>
+                </select>
+            </div>
+            <table class="assignments-table">
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Assignment</th>
+                        <th>Due Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Math</td>
+                        <td>Algebra Homework</td>
+                        <td>Feb 20, 2025</td>
+                        <td>Pending</td>
+                        <td><button class="submit-button">Submit</button></td>
+                    </tr>
+                    <tr>
+                        <td>Science</td>
+                        <td>Lab Report</td>
+                        <td>Feb 22, 2025</td>
+                        <td>Completed</td>
+                        <td><button class="view-button">View</button></td>
+                    </tr>
+                    <tr>
+                        <td>History</td>
+                        <td>Essay on WWII</td>
+                        <td>Feb 25, 2025</td>
+                        <td>Pending</td>
+                        <td><button class="submit-button">Submit</button></td>
+                    </tr>
+                    <tr>
+                        <td>English</td>
+                        <td>Book Report</td>
+                        <td>Feb 28, 2025</td>
+                        <td>Pending</td>
+                        <td><button class="submit-button">Submit</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>Contact Information: info@studentaccesshub.com</p>
+        <div class="social-media-links">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                <img src="images/facebook-icon.png" alt="Facebook" loading="lazy">
+            </a>
+            <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+                <img src="images/twitter-icon.png" alt="Twitter" loading="lazy">
+            </a>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                <img src="images/instagram-icon.png" alt="Instagram" loading="lazy">
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+                <img src="images/linkedin-icon.png" alt="LinkedIn" loading="lazy">
+            </a>
+        </div>
+        <p>&copy; 2025 Student Access Hub. All rights reserved.</p>
+    </footer>
+    
+
+    <div id="login-form-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeLoginForm()">&times;</span>
+            <h2>Login</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required >
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+                <button type="submit" class="login-submit-button">Login to page</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

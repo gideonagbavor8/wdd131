@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Access Hub - Forums Page</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Project: Student Access Hub - Gideon Komla Agbavor - Forums Page">
+    <meta name="author" content="Gideon Komla Agbavor">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@400;500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+
+</head>
+<body>
+    <div id="date-time-container"></div>
+    <header>
+        <div class="header-left">
+            <div class="menu-icon" onclick="openSlidePane()">&#9776;</div>
+            <div class="logo">
+                <img src="images/logo.jpeg" alt="School Logo" loading="lazy">
+            </div>
+        </div>
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="grades.html">Grades</a></li>
+                <li><a href="assignments.html">Assignments</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="forums.html">Forums</a></li>  
+            </ul>
+        </nav>
+        <button class="login-button" onclick="openLoginForm()">Login</button>
+        <div class="search-container">
+            <form class="search-bar">
+                <input type="text" name="query" placeholder="your name..." aria-label="Search">
+                <button class="search-button" type="submit">Search</button>
+            </form>
+        </div>
+        <div class="profile" onclick="toggleDropdown()">
+            <img src="" alt="Student Profile" loading="lazy">
+            <div class="dropdown-content" id="dropdown-content">
+                <a href="#">View Profile</a>
+                <a href="#">Settings</a>
+                <a href="#">Logout</a>    
+            </div>
+        </div>
+    </header>
+    <div id="slide-pane" class="slide-pane">
+        <span class="close-icon" onclick="closeSlidePane()">&times;</span>
+        <ul class="pane-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="grades.html">Grades</a></li>
+            <li><a href="assignments.html">Assignments</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="forums.html">Forums</a></li>
+        </ul>
+    </div>
+    <main>
+        <section class="forums">
+            <div id="date-time-container"></div>
+            <h1>Forums</h1>
+            <p>Here you can participate in various discussions and forums.</p>
+            <div class="forum-categories">
+                <h2>Forum Categories</h2>
+                <ul>
+                    <li><a href="#">General Discussion</a></li>
+                    <li><a href="#">Course Discussions</a></li>
+                    <li><a href="#">Study Groups</a></li>
+                    <li><a href="#">Extracurricular Activities</a></li>
+                </ul>
+            </div>
+            <div class="recent-discussions">
+                <h2>Recent Discussions</h2>
+                <ul>
+                    <li><a href="#">Project Collaboration for Science Fair</a></li>
+                    <li><a href="#">Book Club Meeting</a></li>
+                    <li><a href="#">Math Homework Help</a></li>
+                    <li><a href="#">Upcoming School Events</a></li>
+                </ul>
+            </div>
+            <div class="new-discussion">
+                <h2>Start a New Discussion</h2>
+                <form>
+                    <label for="discussion-title">Title:</label>
+                    <input type="text" id="discussion-title" name="discussion-title" required>
+                    <label for="discussion-category">Category:</label>
+                    <select id="discussion-category" name="discussion-category">
+                        <option value="general">General Discussion</option>
+                        <option value="course">Course Discussions</option>
+                        <option value="study">Study Groups</option>
+                        <option value="extracurricular">Extracurricular Activities</option>
+                    </select>
+                    <label for="discussion-content">Content:</label>
+                    <textarea id="discussion-content" name="discussion-content" rows="5" required></textarea>
+                    <button type="submit" class="start-discussion-button">Start Discussion</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Contact Information: info@studentaccesshub.com</p>
+        <div class="social-media-links">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                <img src="images/facebook-icon.png" alt="Facebook" loading="lazy">
+            </a>
+            <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+                <img src="images/twitter-icon.png" alt="Twitter" loading="lazy">
+            </a>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                <img src="images/instagram-icon.png" alt="Instagram" loading="lazy">
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+                <img src="images/linkedin-icon.png" alt="LinkedIn" loading="lazy">
+            </a>
+        </div>
+        <p>&copy; 2025 Student Access Hub. All rights reserved.</p>
+    </footer>
+    
+
+    <div id="login-form-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeLoginForm()">&times;</span>
+            <h2>Login</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required >
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+                <button type="submit" class="login-submit-button">Login to page</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
